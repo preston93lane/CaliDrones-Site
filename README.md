@@ -1,17 +1,28 @@
 # californiadrones.io
 
-Static site for California Drones. Plain HTML, CSS and JavaScript, no build step.
+Static site for California Drones. Plain HTML, CSS and JavaScript modules, no build step.
 
-- `index.html`: home page (services, process, quote form)
-- `styles.css`: all styles; color and type tokens are at the top
-- `main.js`: hero point-cloud animation and quote form handling
+- `index.html`: home page. Five sections sit over a fixed 3D stage (intro and the four services), followed by track record, process and the quote form.
+- `styles.css`: all styles; color and type tokens are at the top.
+- `js/main.js`: header, section index, counters, quote form, and loading the 3D stage.
+- `js/stage.js`: the three.js scene. One point cloud morphs between five shapes as the page scrolls while the drones fly each job.
+- `js/shapes.js`: the point-cloud shapes (California relief map, cell tower, survey terrain, house, FPV tunnel).
+- `js/drones.js`: the two procedural drone models (camera drone and FPV quad).
+- `js/california.js`: California outline from US Census boundaries (public domain).
+- `vendor/three.custom.min.js`: trimmed three.js build (MIT). Rebuild instructions are in `vendor/three.entry.js`.
 - `privacy.html`, `404.html`, `robots.txt`, `sitemap.xml`, `favicon.svg`
+
+The page works without WebGL and with reduced motion: the text and form are ordinary HTML and the stage is decoration.
 
 ## Quote form
 
-The form posts to [Web3Forms](https://web3forms.com). Replace `YOUR_WEB3FORMS_ACCESS_KEY` in `index.html`
-with the access key Web3Forms emails you. Until then the form opens the visitor's email app with the request filled in.
+The form posts to [Web3Forms](https://web3forms.com) using the access key in `index.html`.
 
 ## Local preview
 
     python3 -m http.server 8080
+
+## Branches
+
+- `main`: the live site.
+- `v1-original`: the first, light design, kept as a restore point.
