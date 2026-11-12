@@ -327,7 +327,7 @@ function initQuoteForm(form) {
     data.set("services", services.length ? services.join(", ") : "Not specified");
 
     // Until a form key is configured, fall back to the visitor's email app
-    if (data.get("access_key") === "YOUR_WEB3FORMS_ACCESS_KEY") {
+    if (data.get("access_key") === "YOUR_WEB3FORMS_ACCESS_KEY" /* unset key */) {
       const body = [
         `Name: ${data.get("name")}`,
         `Company: ${data.get("company") || "-"}`,
