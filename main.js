@@ -296,7 +296,7 @@ function initQuoteForm(form) {
   if (!form) return;
   const status = document.getElementById("form-status");
   const button = form.querySelector("button[type=submit]");
-  const CONTACT_EMAIL = "info@californiadrones.io";
+  const CONTACT_EMAIL = "hello@californiadrones.io";
 
   const setStatus = (msg, state) => {
     status.textContent = msg;
