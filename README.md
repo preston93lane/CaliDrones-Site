@@ -11,6 +11,7 @@ Static site for California Drones. Plain HTML, CSS and JavaScript modules, no bu
 - `js/california.js`: California outline from US Census boundaries (public domain).
 - `vendor/three.custom.min.js`: trimmed three.js build (MIT). Rebuild instructions are in `vendor/three.entry.js`.
 - `privacy.html`, `404.html`, `robots.txt`, `sitemap.xml`, `favicon.svg`
+- `_headers`: security headers. The content security policy allows the inline import map by its hash, so update the hash if that script changes.
 
 The page works without WebGL and with reduced motion: the text and form are ordinary HTML and the stage is decoration.
 
