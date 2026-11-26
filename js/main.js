@@ -1,3 +1,5 @@
+import { initQuoteForm } from './quote-form.js';
+
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const chapters = [...document.querySelectorAll('[data-chapter]')];
 
@@ -74,64 +76,5 @@ function initServiceLinks() {
       const box = [...document.querySelectorAll('input[name="services"]')].find((el) => el.value === link.dataset.service);
       if (box) box.checked = true;
     });
-  });
-}
-
-/* ---------- Quote form ---------- */
-
-function initQuoteForm(form) {
-  if (!form) return;
-  const status = document.getElementById('form-status');
-  const button = form.querySelector('button[type=submit]');
-  const CONTACT_EMAIL = 'hello@californiadrones.io';
-
-  const setStatus = (msg, state) => {
-    status.textContent = msg;
-    status.dataset.state = state || '';
-  };
-
-  form.addEventListener('input', (e) => {
-    if (e.target.hasAttribute('aria-invalid') && e.target.checkValidity()) e.target.removeAttribute('aria-invalid');
-  });
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const invalid = [...form.querySelectorAll('[required]')].filter((el) => !el.checkValidity());
-    form.querySelectorAll('[aria-invalid]').forEach((el) => el.removeAttribute('aria-invalid'));
-    if (invalid.length) {
-      invalid.forEach((el) => el.setAttribute('aria-invalid', 'true'));
-      invalid[0].focus();
-      setStatus('Add your name, a valid email, the project location and a few details, then send again.', 'error');
-      return;
-    }
-
-    const data = new FormData(form);
-    if (data.get('botcheck')) return;
-
-    const services = data.getAll('services');
-    data.delete('services');
-    data.set('services', services.length ? services.join(', ') : 'Not specified');
-
-    button.disabled = true;
-    button.textContent = 'Sending…';
-    setStatus('', '');
-
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: data,
-      });
-      const json = await res.json().catch(() => ({}));
-      if (!res.ok || json.success === false) throw new Error(json.message || res.statusText);
-      form.reset();
-      setStatus("Request sent. You'll get a reply by email soon.", 'ok');
-    } catch (err) {
-      setStatus(`The request didn't send. Try again, or email ${CONTACT_EMAIL} directly.`, 'error');
-    } finally {
-      button.disabled = false;
-      button.textContent = 'Send project request';
-    }
   });
 }

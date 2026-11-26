@@ -1,0 +1,11 @@
+/* Shared base for brand templates. Tokens come from ../tokens.css */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Big+Shoulders+Display:wght@800&display=block");
+@import url("../tokens.css");
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--abyss); color: var(--text); font-family: var(--font); -webkit-font-smoothing: antialiased; }
+.canvas { position: relative; overflow: hidden; background:
+  radial-gradient(90% 70% at 72% 38%, #0C3443 0%, transparent 62%),
+  radial-gradient(60% 50% at 10% 100%, #082631 0%, transparent 70%), var(--abyss); }
+.wide { font-variation-settings: "wdth" 120; }
+.bands { position: absolute; left: 0; right: 0; bottom: 0; display: grid; }
+.bands i { display: block; background: var(--signal); }
