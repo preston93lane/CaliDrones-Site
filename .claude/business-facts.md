@@ -9,7 +9,7 @@ The only claims marketing copy, ads, outreach and pages may make. Everything her
 - 2,145 cell towers inspected, on sites for AT&T, T-Mobile and Verizon.
 - Projects in 26 states and territories, including Puerto Rico and the U.S. Virgin Islands.
 - FPV for Raging Waters, California's largest waterpark.
-- Aircraft: DJI Mavic 3 Enterprise (inspection, mapping); FPV drones (film).
+- Aircraft: DJI Mavic 3 Enterprise (inspection, mapping); FPV drones (film); 4K drones under 250 g with prop guards for flying close to and over people (FAA Category 1 when the takeoff weight with guards stays under 250 g; sustained flight over crowds also needs Remote ID; over moving vehicles only on closed courses with participants notified).
 - Airspace: LAANC authorization for controlled airspace, including sites that need further FAA coordination.
 - Services and deliverables:
   - Cell tower inspections: sector-by-sector photo sets, antenna and mount close-ups, orbit and plumb video, organized labeled files.
