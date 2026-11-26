@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>California Drones Brand Sheet</title>
+<link rel="icon" href="logo/mark-app.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Big+Shoulders+Display:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--abyss); color: var(--text); font: 400 var(--step-0)/1.6 var(--font); -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+  header.top { padding: 56px 0 40px; border-bottom: 1px solid var(--line-soft); }
+  header.top img { height: 44px; }
+  header.top h1 { margin-top: 40px; font-size: var(--step-3); font-weight: 740; font-variation-settings: "wdth" 120; letter-spacing: -0.022em; line-height: 1; }
+  header.top p { margin-top: 16px; max-width: 40rem; color: var(--lede); font-size: var(--step-1); line-height: 1.5; }
+  section { padding: 64px 0; border-bottom: 1px solid var(--line-soft); }
+  h2 { font-size: var(--step-2); font-weight: 740; font-variation-settings: "wdth" 116; letter-spacing: -0.015em; line-height: 1.06; }
+  h2 small { display: block; margin-bottom: 10px; font: 800 0.95rem/1 var(--font-display); letter-spacing: .08em; text-transform: uppercase; color: var(--signal); }
+  .intro { margin-top: 14px; max-width: 40rem; color: var(--muted); }
+  .grid { display: grid; gap: 16px; margin-top: 32px; }
+  .g2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
+  .g3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+  .g6 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); }
+  .tile { border: 1px solid var(--line); border-radius: var(--radius-panel); overflow: hidden; background: var(--panel); }
+  .tile .art { display: grid; place-items: center; min-height: 180px; padding: 28px; }
+  .tile .cap { padding: 12px 16px; border-top: 1px solid var(--line); font-size: var(--step--1); color: var(--muted); }
+  .tile .cap b { color: var(--text); font-weight: 620; }
+  .on-dark { background: var(--abyss); } .on-paper { background: var(--paper); } .on-gold { background: var(--signal); }
+  .art img { max-width: 100%; max-height: 120px; }
+  .sw { height: 110px; } .sw-meta { padding: 12px 14px; font-size: var(--step--1); line-height: 1.45; }
+  .sw-meta b { display: block; font-size: 0.95rem; } .sw-meta code { font: 500 0.82rem/1.4 ui-monospace, Menlo, monospace; color: var(--muted); }
+  .ratio { display: flex; height: 44px; margin-top: 28px; border-radius: var(--radius); overflow: hidden; }
+  .ratio span { display: grid; place-items: center; font-size: .8rem; font-weight: 650; color: var(--on-signal); }
+  .spec { padding: 26px 0; border-top: 1px solid var(--line-soft); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: 24px; align-items: baseline; }
+  .spec .meta { font-size: var(--step--1); color: var(--muted); }
+  .spec .meta b { display: block; color: var(--text); font-size: 0.95rem; }
+  .s-word { font: 800 clamp(2rem, 6vw, 4rem)/1 var(--font-display); text-transform: uppercase; letter-spacing: .02em; }
+  .s-h1 { font-size: var(--step-3); font-weight: 740; font-variation-settings: "wdth" 120; letter-spacing: -0.022em; line-height: 1; }
+  .s-h2 { font-size: var(--step-2); font-weight: 740; font-variation-settings: "wdth" 116; letter-spacing: -0.015em; line-height: 1.06; }
+  .s-stat { font-size: var(--step-stat); font-weight: 320; font-variation-settings: "wdth" 125; letter-spacing: -0.03em; line-height: .95; font-variant-numeric: tabular-nums; }
+  .s-body { max-width: 34rem; color: var(--muted); }
+  .btn { display: inline-flex; align-items: center; min-height: 50px; padding: 0 24px; border-radius: var(--radius); border: 1.5px solid transparent; font: 650 var(--step-0) var(--font); font-variation-settings: "wdth" 108; text-decoration: none; }
+  .btn-signal { background: var(--signal); color: var(--on-signal); } .btn-line { border-color: #2C6377; color: var(--text); }
+  .chip { display: inline-block; padding: 9px 15px; border: 1px solid var(--field-line); border-radius: var(--radius-pill); background: var(--field); font-size: .95rem; }
+  .chip.on { background: var(--signal); border-color: var(--signal); color: var(--on-signal); font-weight: 600; }
+  .input { display: block; width: 100%; padding: 13px 14px; border: 1px solid var(--scan); border-radius: var(--radius); background: var(--field); color: var(--text); box-shadow: 0 0 0 3px rgba(111, 227, 238, .2); font: inherit; }
+  .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .gets { display: grid; gap: 8px; list-style: none; }
+  .gets li { position: relative; padding-left: 18px; } .gets li::before { content: ""; position: absolute; left: 0; top: .6em; width: 7px; height: 7px; background: var(--scan); transform: rotate(45deg); }
+  .figure { padding-left: 18px; border-left: 2px solid var(--signal); font-size: var(--step-1); line-height: 1.4; }
+  .figure strong { font-weight: 760; font-variation-settings: "wdth" 120; }
+  .bands { display: grid; gap: 7px; } .bands i { display: block; background: var(--signal); }
+  .path { height: 2px; background: repeating-linear-gradient(90deg, #2C6377 0 6px, transparent 6px 13px); }
+  .hud { position: relative; padding: 28px; min-height: 150px; background: radial-gradient(circle at 30% 40%, rgba(111,227,238,.25) 1px, transparent 1.6px) 0 0/14px 14px, var(--deep); }
+  .hud::before, .hud::after { content: ""; position: absolute; width: 22px; height: 22px; border: 2px solid var(--muted); }
+  .hud::before { left: 12px; top: 12px; border-right: 0; border-bottom: 0; } .hud::after { right: 12px; bottom: 12px; border-left: 0; border-top: 0; }
+  .hud code { position: absolute; left: 16px; bottom: 14px; font: 600 .72rem ui-monospace, Menlo, monospace; color: var(--muted); letter-spacing: .04em; }
+  .voice { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px; margin-top: 32px; }
+  .voice div { padding: 20px; border-radius: var(--radius-panel); border: 1px solid var(--line); }
+  .voice .no { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--danger); }
+  .voice .yes { margin-top: 10px; }
+  .voice .lbl { font: 800 .8rem/1 var(--font-display); letter-spacing: .08em; text-transform: uppercase; color: var(--scan); margin-bottom: 10px; }
+  .apps img { display: block; width: 100%; height: auto; }
+  footer { padding: 40px 0 64px; color: var(--muted); font-size: var(--step--1); }
+  @media (max-width: 640px) { .spec { grid-template-columns: 1fr; gap: 10px; } }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <img src="logo/lockup-horizontal-on-dark.svg" alt="California Drones">
+  <h1>Brand sheet</h1>
+  <p><strong>Golden hour + scan.</strong> Cinematic California light, held to inspection-grade precision. Tagline: <em>Flown right.</em> Full rules in BRAND.md.</p>
+</div></header>
+
+<section><div class="wrap">
+  <h2><small>01</small>Logo</h2>
+  <p class="intro">The Golden hour mark: a drone in front of a setting sun, cut by four horizon bands. The wordmark is Big Shoulders Display ExtraBold, outlined in every file.</p>
+  <div class="grid g2">
+    <div class="tile"><div class="art on-dark"><img src="logo/lockup-horizontal-on-dark.svg" alt="Horizontal lockup on dark"></div><p class="cap"><b>Primary</b> · lockup-horizontal-on-dark.svg</p></div>
+    <div class="tile"><div class="art on-paper"><img src="logo/lockup-horizontal-on-light.svg" alt="Horizontal lockup on light"></div><p class="cap"><b>On paper</b> · lockup-horizontal-on-light.svg</p></div>
+  </div>
+  <div class="grid g6">
+    <div class="tile"><div class="art on-dark"><img src="logo/lockup-stacked-on-dark.svg" alt=""></div><p class="cap"><b>Stacked</b></p></div>
+    <div class="tile"><div class="art on-paper"><img src="logo/lockup-stacked-on-light.svg" alt=""></div><p class="cap"><b>Stacked</b> · light</p></div>
+    <div class="tile"><div class="art on-dark"><img src="logo/mark.svg" alt=""></div><p class="cap"><b>Mark</b></p></div>
+    <div class="tile"><div class="art on-paper"><img src="logo/mark-app.svg" alt=""></div><p class="cap"><b>App icon</b></p></div>
+    <div class="tile"><div class="art on-paper"><img src="logo/mark-mono-dark.svg" alt=""></div><p class="cap"><b>One color</b> · dark</p></div>
+    <div class="tile"><div class="art on-dark"><img src="logo/mark-mono-light.svg" alt=""></div><p class="cap"><b>One color</b> · light</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2><small>02</small>Color</h2>
+  <p class="intro">Dark by default: night sky, one sun. Gold always points to the next action.</p>
+  <div class="grid g6">
+    <div class="tile"><div class="sw" style="background:#04141B"></div><p class="sw-meta"><b>Abyss</b><code>#04141B</code><br>Background</p></div>
+    <div class="tile"><div class="sw" style="background:#0A2733"></div><p class="sw-meta"><b>Panel</b><code>#0A2733</code><br>Cards, forms</p></div>
+    <div class="tile"><div class="sw" style="background:#F2C230"></div><p class="sw-meta"><b>Golden Hour</b><code>#F2C230</code><br>Sun, CTAs · 11.2:1</p></div>
+    <div class="tile"><div class="sw" style="background:#6FE3EE"></div><p class="sw-meta"><b>Scan</b><code>#6FE3EE</code><br>Data, focus · 12.4:1</p></div>
+    <div class="tile"><div class="sw" style="background:#E8F1F2"></div><p class="sw-meta"><b>Haze</b><code>#E8F1F2</code><br>Text · 16.3:1</p></div>
+    <div class="tile"><div class="sw" style="background:#94AFB7"></div><p class="sw-meta"><b>Mist</b><code>#94AFB7</code><br>Secondary · 8.1:1</p></div>
+  </div>
+  <div class="grid g6">
+    <div class="tile"><div class="sw" style="background:#F6F3EC"></div><p class="sw-meta"><b>Paper</b><code>#F6F3EC</code><br>Print, documents</p></div>
+    <div class="tile"><div class="sw" style="background:#8A6100"></div><p class="sw-meta"><b>Amber ink</b><code>#8A6100</code><br>Gold on paper · 5.0:1</p></div>
+    <div class="tile"><div class="sw" style="background:#0E6E78"></div><p class="sw-meta"><b>Scan ink</b><code>#0E6E78</code><br>Cyan on paper · 5.4:1</p></div>
+    <div class="tile"><div class="sw" style="background:#4A5F66"></div><p class="sw-meta"><b>Slate</b><code>#4A5F66</code><br>Secondary on paper</p></div>
+    <div class="tile"><div class="sw" style="background:#FFD75E"></div><p class="sw-meta"><b>Flare</b><code>#FFD75E</code><br>Gold hover</p></div>
+    <div class="tile"><div class="sw" style="background:#FF9A8B"></div><p class="sw-meta"><b>Coral</b><code>#FF9A8B</code><br>Errors only</p></div>
+  </div>
+  <div class="ratio" aria-label="Proportions: 70 percent night, 20 percent text, 8 percent scan, 2 percent gold">
+    <span style="flex:70;background:#0A2733;color:var(--muted)">Night 70%</span><span style="flex:20;background:#E8F1F2">Text 20%</span><span style="flex:8;background:#6FE3EE">8%</span><span style="flex:2.4;background:#F2C230"></span>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2><small>03</small>Type</h2>
+  <p class="intro">Two typefaces. Archivo does everything, widened for headlines and numbers. Big Shoulders Display is for the wordmark and uppercase labels only.</p>
+  <div style="margin-top:32px">
+    <div class="spec"><p class="meta"><b>Display</b>Big Shoulders Display 800 · upper · +0.02em</p><p class="s-word">Flown right.</p></div>
+    <div class="spec"><p class="meta"><b>H1</b>Archivo 740 · width 120 · −0.022em</p><p class="s-h1">Drone inspections, 3D models and aerial film.</p></div>
+    <div class="spec"><p class="meta"><b>H2</b>Archivo 740 · width 116</p><p class="s-h2">Cell tower inspections</p></div>
+    <div class="spec"><p class="meta"><b>Stat</b>Archivo 320 · width 125 · tabular</p><p class="s-stat">2,145</p></div>
+    <div class="spec"><p class="meta"><b>Body</b>Archivo 400 · 17/27</p><p class="s-body">Close-up, high-resolution imagery of antennas, mounts, cabling and steel, captured before anyone has to climb. Every sector and elevation is documented so your engineers can find problems from the ground.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2><small>04</small>Components and devices</h2>
+  <div class="grid g2">
+    <div class="tile"><div class="art on-dark" style="place-items:start;gap:18px">
+      <div class="row"><a class="btn btn-signal" href="#">Request a quote</a><a class="btn btn-line" href="#">Call (805) 746-9775</a></div>
+      <div class="row"><span class="chip on">Cell tower inspection</span><span class="chip">3D model</span><span class="chip">FPV</span></div>
+      <input class="input" value="Simi Valley, CA" aria-label="Example input with focus">
+    </div><p class="cap"><b>Controls</b> · one gold action per view · Scan focus</p></div>
+    <div class="tile"><div class="art on-dark" style="place-items:start;gap:22px">
+      <p class="figure"><strong>2,145</strong> towers inspected, on sites for AT&amp;T, T-Mobile and Verizon.</p>
+      <ul class="gets"><li>Sector-by-sector photo sets</li><li>Orbit and plumb video</li></ul>
+      <div class="path" style="width:100%"></div>
+    </div><p class="cap"><b>Gold rule · Scan diamonds · Flight path</b></p></div>
+    <div class="tile"><div class="art on-dark" style="place-items:stretch">
+      <div class="bands" style="width:100%"><i style="height:3px"></i><i style="height:5px"></i><i style="height:7px"></i><i style="height:9px"></i></div>
+    </div><p class="cap"><b>Horizon bands</b> · thin to thick, toward the ground</p></div>
+    <div class="tile"><div class="hud"><code>34.05° N 118.24° W · 120 FT AGL</code></div><p class="cap"><b>Point cloud + HUD frame</b> · mapping and inspection only, real data only</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2><small>05</small>Voice</h2>
+  <p class="intro">Plain, specific, calm. Numbers over adjectives. No exclamation marks.</p>
+  <div class="voice">
+    <div><p class="lbl">Headline</p><p class="no">Cutting-edge aerial solutions for all your needs!</p><p class="yes">Drone inspections, 3D models and aerial film, flown across California.</p></div>
+    <div><p class="lbl">Real estate</p><p class="no">Breathtaking drone photography that will wow buyers.</p><p class="yes">Aerial stills and twilight video that show the lot, the view and the approach.</p></div>
+    <div><p class="lbl">Telecom</p><p class="no">Our experienced team provides comprehensive inspection services.</p><p class="yes">2,145 towers inspected. Close-ups your engineers can work from.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2><small>06</small>In use</h2>
+  <div class="grid g2 apps">
+    <div class="tile"><img src="../img/og-image.png" alt="Link preview image"><p class="cap"><b>Link preview</b> · /img/og-image.png · 1200×630</p></div>
+    <div class="tile"><img src="templates/business-card-proof.png" alt="Business card front and back"><p class="cap"><b>Business card</b> · templates/business-card.html · 3.5×2 in + bleed</p></div>
+  </div>
+  <div class="grid g2 apps">
+    <div class="tile"><img src="logo/png/banner-linkedin-1584x396.png" alt="Social banner"><p class="cap"><b>Social banner</b> · 1584×396</p></div>
+    <div class="tile"><div class="art on-paper" style="min-height:0"><img src="logo/png/avatar-1080.png" alt="Profile picture" style="width:120px;border-radius:50%"></div><p class="cap"><b>Profile picture / Google logo</b> · avatar-1080.png, gbp-logo-720.png</p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">California Drones brand sheet · source of truth: brand/BRAND.md and brand/tokens.css</div></footer>
+</body>
+</html>

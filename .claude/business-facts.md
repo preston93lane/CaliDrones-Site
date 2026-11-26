@@ -18,6 +18,9 @@ The only claims marketing copy, ads, outreach and pages may make. Everything her
   - Cinematic aerial and FPV: 4K stabilized aerials, FPV fly-throughs, color-graded footage, edited reels on request.
 - Pricing: quoted per project. No published prices unless the owner adds them here.
 
+## Brand
+Voice, tagline, colors, type and logo files: `brand/BRAND.md` (tokens in `brand/tokens.css`). All copy, pages, ads and outreach follow its voice rules.
+
 ## Not yet available (ask the owner)
 - Testimonials and reviews, portfolio media, package prices, insurance limits, mailing address for CAN-SPAM footers.
 

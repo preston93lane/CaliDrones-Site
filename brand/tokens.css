@@ -1,0 +1,60 @@
+/*
+  California Drones design tokens.
+  The website implements these in the :root block of /styles.css. Keep the two in step:
+  change a value here, then mirror it there (and in tokens.json).
+*/
+:root {
+  /* Night: surfaces, darkest to lightest */
+  --abyss: #04141B;        /* Primary background. The night sky behind the sun. */
+  --deep: #071E28;         /* Alternate section background */
+  --panel: #0A2733;        /* Cards, forms, raised surfaces */
+  --line: #1B4352;         /* Rules and borders */
+  --line-soft: #123340;    /* Quiet dividers */
+  --field: #051820;        /* Input background */
+  --field-line: #2A5869;   /* Input and chip border */
+
+  /* Light on night */
+  --text: #E8F1F2;         /* "Haze". Primary text on dark, 16.3:1 on abyss */
+  --lede: #B4C9CF;         /* Lead paragraphs, 10.9:1 */
+  --muted: #94AFB7;        /* "Mist". Secondary text, 8.1:1 */
+
+  /* Accents */
+  --signal: #F2C230;       /* "Golden Hour". The sun. CTAs, key figures, focus */
+  --signal-hot: #FFD75E;   /* "Flare". Hover state of signal */
+  --on-signal: #0A1A20;    /* Text on signal, 10.6:1 */
+  --scan: #6FE3EE;         /* "Scan". Data, inspection and mapping cues, input focus */
+  --danger: #FF9A8B;       /* "Coral". Errors only */
+
+  /* Day: print, documents, light backgrounds */
+  --paper: #F6F3EC;        /* Warm off-white page */
+  --ink: #04141B;          /* Text on paper (same as abyss), 16.9:1 */
+  --slate: #4A5F66;        /* Secondary text on paper, 6.1:1 */
+  --amber-ink: #8A6100;    /* Gold for text and lines on paper, 5.0:1. Never put signal text on white */
+  --scan-ink: #0E6E78;     /* Scan for text and lines on paper, 5.4:1 */
+
+  /* Type */
+  --font: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Big Shoulders Display", "Archivo", system-ui, sans-serif;
+  --step--1: 0.875rem;                                  /* 14px labels, meta */
+  --step-0: 1.0625rem;                                  /* 17px body */
+  --step-1: 1.25rem;                                    /* 20px lede, H3 */
+  --step-2: clamp(1.9rem, 1.3rem + 2.2vw, 3rem);        /* H2 */
+  --step-3: clamp(2.3rem, 1.2rem + 3vw, 3.5rem);        /* H1 */
+  --step-stat: clamp(3.4rem, 1.6rem + 6.4vw, 7rem);     /* Big numbers */
+
+  /* Space and shape */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 72px; --space-9: 128px;
+  --gutter: clamp(20px, 5vw, 64px);
+  --max: 1240px;
+  --header-h: 68px;
+  --radius: 8px;           /* Buttons, inputs */
+  --radius-panel: 14px;    /* Cards, forms */
+  --radius-pill: 999px;    /* Chips */
+
+  /* Motion: smooth like a stabilized gimbal, never bouncy */
+  --ease: cubic-bezier(.22, .61, .36, 1);
+  --dur-fast: .16s;
+  --dur: .25s;
+  --dur-slow: 1.3s;
+}

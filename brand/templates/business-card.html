@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Business card (3.5 x 2 in + 0.125 in bleed)</title><link rel="stylesheet" href="_base.css">
+<!-- Print to PDF at 3.75in x 2.25in, no margins. Keep text 0.25in inside the edge (0.125in bleed + 0.125in safe area).
+     Replace NAME and TITLE before printing. -->
+<style>
+  @page { size: 3.75in 2.25in; margin: 0; }
+  .card { width: 3.75in; height: 2.25in; position: relative; overflow: hidden; page-break-after: always; }
+  .front { display: grid; place-items: center; }
+  .front img { height: 1.02in; margin-top: -0.12in; }
+  .front .stripe { position: absolute; left: 0; right: 0; background: var(--signal); }
+  .back { background: var(--paper); color: var(--ink); padding: 0.34in 0.36in; }
+  .back .name { font-size: 13pt; font-weight: 740; font-variation-settings: "wdth" 116; letter-spacing: -0.01em; }
+  .back .title { margin-top: 2pt; font-size: 7.5pt; color: var(--slate); font-weight: 520; }
+  .back .rule { width: 0.42in; height: 2pt; background: var(--amber-ink); margin: 9pt 0 8pt; }
+  .back dl { font-size: 8pt; line-height: 1.55; font-weight: 480; font-variant-numeric: tabular-nums; }
+  .back .creds { position: absolute; left: 0.36in; bottom: 0.3in; font-size: 6.5pt; color: var(--slate); font-weight: 560; letter-spacing: .01em; }
+  .back .mark { position: absolute; right: 0.34in; top: 0.32in; width: 0.42in; }
+</style></head><body>
+<div class="card canvas front">
+  <img src="../logo/lockup-stacked-on-dark.svg" alt="California Drones">
+  <!-- Bands sit above the trim line (0.125in from the bottom edge); the thickest runs off the trimmed edge -->
+  <div class="stripe" style="bottom:0.345in;height:0.012in"></div><div class="stripe" style="bottom:0.3in;height:0.02in"></div><div class="stripe" style="bottom:0.235in;height:0.03in"></div><div class="stripe" style="bottom:0;height:0.185in"></div>
+</div>
+<div class="card back">
+  <img class="mark" src="../logo/mark.svg" alt="">
+  <p class="name">NAME</p>
+  <p class="title">TITLE · California Drones</p>
+  <div class="rule"></div>
+  <dl><dd>(805) 746-9775</dd><dd>hello@californiadrones.io</dd><dd>californiadrones.io</dd></dl>
+  <p class="creds">FAA Part 107 certified · Fully insured · Los Angeles, CA</p>
+</div>
+</body></html>
