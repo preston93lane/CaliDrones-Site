@@ -3,3 +3,6 @@ wrangler.jsonc
 README.md
 .assetsignore
 vendor/three.entry.js
+.claude
+marketing
+.gitignore
